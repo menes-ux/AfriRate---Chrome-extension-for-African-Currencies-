@@ -1,0 +1,136 @@
+/*
+ * Currency Converter Styles for Chrome Extension Popup
+ * Focuses on contained layout within a small window size.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Color Variables */
+:root {
+  --bg-color: #F5F5F5;
+  --text-color: #000000;
+  --primary: #ff6200;
+  --secondary: #ffffffee;
+}
+
+/* Dark mode (Optional, but included for completeness) */
+.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --primary: #ff6200;
+  --secondary: #ffffff;
+}
+
+body {
+    width: 320px; /* Standard width for a functional popup */
+    padding: 16px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Removed min-height: 100vh and positioning for popup constraints */
+}
+
+/* Styles for main content wrapper */
+main {
+    /* Main element should only contain content, no height constraints */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Spacing between h1 and converter section */
+}
+
+h1 {
+    font-size: 1.25rem; /* text-xl, adjusted from user's 'large' */
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1px;
+    padding-bottom: 8px; /* Add slight space below title */
+}
+
+.converter-section {
+    background: var(--bg-color);
+    padding: 1rem; /* Reduced padding from 2rem to 1rem for small space */
+    border-radius: 8px; /* Adjusted to 8px for consistency */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between converter boxes and button */
+    width: 100%; /* Ensure it fills the body width, removed fixed 25rem */
+    letter-spacing: -1px;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+input,
+select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    background-color: var(--secondary); /* Use secondary variable */
+    color: var(--text-color);
+}
+
+/* Style for the disabled result input */
+#result {
+    background-color: #e5e7eb; /* light gray background when disabled/readonly */
+    font-weight: 600;
+}
+
+/* Hide default number input controls */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Button style now targets the ID used in the working HTML/JS */
+#convert-button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+#convert-button:hover:not(:disabled) {
+    background: orangered;
+}
+
+#convert-button:disabled {
+    background-color: #9ca3af; /* gray-400 */
+    cursor: not-allowed;
+}
+
+
+/* Footer should be simplified or hidden in a popup, remove fixed position */
+footer {
+    text-align: center;
+    padding-top: 10px;
+    /* Removed fixed positioning for popup environment */
+}
+
+footer p {
+    font-size: small;
+    color: var(--text-color);
+}
