@@ -1,6 +1,6 @@
 # AfroRate - African Currency Converter
 
-AfroRate is a lightweight Chrome extension that allows users to convert African currencies into international currencies using real-time exchange rates. It is designed to be fast, simple, and reliable for travelers, business owners, and anyone dealing with African currencies.
+AfroRate is a lightweight Chrome extension that allows users to convert African currencies into international African currencies using real-time exchange rates. It is designed to be fast, simple, offline and reliable for travelers, business owners, and anyone dealing with African currencies.
 
 ---
 
