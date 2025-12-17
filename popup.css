@@ -28,7 +28,7 @@
 body {
     width: 320px; /* Standard width for a functional popup */
     padding: 16px;
-    background-color: var(--bg-color);
+    background-color: black;
     color: var(--text-color);
     /* Removed min-height: 100vh and positioning for popup constraints */
 }
@@ -39,7 +39,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px; /* Spacing between h1 and converter section */
+    
+    background-color: var(--bg-color);
 }
 
 h1 {
@@ -124,13 +125,30 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /* Footer should be simplified or hidden in a popup, remove fixed position */
-footer {
+.footer {
     text-align: center;
     padding-top: 10px;
     /* Removed fixed positioning for popup environment */
 }
 
-footer p {
+.footer p {
     font-size: small;
     color: var(--text-color);
+}
+
+/* New tags for the versiion 1.2*/
+.tagline {
+  display: inline-block; /* Makes the box wrap the text tightly */
+  
+  /* The Look */
+  background-color: #f1f3f4; /* Very light grey background */
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+  
+  /* The Shape */
+  padding: 4px 12px; /* Space inside the box */
+  border-radius: 20px; /* Fully rounded corners (pill shape) */
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
