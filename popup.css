@@ -28,7 +28,7 @@
 body {
     width: 320px; /* Standard width for a functional popup */
     padding: 16px;
-    background-color: black;
+    background-color:var(--bg-color);
     color: var(--text-color);
     border-radius: .5313rem;
     letter-spacing: -.5px;
